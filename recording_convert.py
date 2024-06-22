@@ -1,8 +1,10 @@
+import os
 from pydub import AudioSegment
-from pydub.playback import play
+import speech_recognition as sr
 
-import speech_recognition as sr #this one not work now still firgure it out
-from pydub import AudioSegment
+# Set the path to the local ffmpeg and ffplay executables
+ffmpeg_path = os.path.join(os.path.dirname(__file__), 'bin')
+os.environ["PATH"] += os.pathsep + ffmpeg_path
 
 def audio_to_text(audio_file, text_file):
     # Initialize recognizer
@@ -32,7 +34,7 @@ def audio_to_text(audio_file, text_file):
         file.write(text)
 
 # Example usage
-audio_file = "path/to/your/audiofile.mp3"  # Update this to your audio file path
-text_file = "path/to/your/outputfile.txt"  # Update this to your desired output text file path
+current_dir = os.path.dirname(__file__)
+audio_file = os.path.join(current_dir, 'Audio', 'recording.wav')
+text_file = os.path.join(current_dir, 'outputfile.txt')
 audio_to_text(audio_file, text_file)
-
