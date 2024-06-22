@@ -1,37 +1,56 @@
 import os
+import openai
 from pydub import AudioSegment
-import speech_recognition as sr
 
 # Set the path to the local ffmpeg and ffplay executables
 ffmpeg_path = os.path.join(os.path.dirname(__file__), 'bin')
 os.environ["PATH"] += os.pathsep + ffmpeg_path
 
+# Initialize OpenAI client using the API key from the environment variable
+api_key = os.getenv('OPENAI_API_KEY')
+client = openai.OpenAI(api_key=api_key)
+
+def split_audio(audio_file, chunk_size_ms=240000):  # 4 minutes = 240000 ms
+    """Split audio file into smaller chunks."""
+    audio = AudioSegment.from_file(audio_file)
+    chunks = []
+    for i in range(0, len(audio), chunk_size_ms):
+        chunk = audio[i:i + chunk_size_ms]
+        chunks.append(chunk)
+    return chunks
+
+def transcribe_audio_chunk(chunk, chunk_index):
+    """Transcribe a chunk of audio."""
+    temp_audio_file = f"chunk_{chunk_index}.wav"
+    chunk.export(temp_audio_file, format="wav")
+    
+    with open(temp_audio_file, "rb") as audio:
+        transcription = client.audio.transcriptions.create(
+            model="whisper-1",
+            file=audio,
+            response_format="text"
+        )
+        os.remove(temp_audio_file)
+        return transcription.text
+
 def audio_to_text(audio_file, text_file):
-    # Initialize recognizer
-    recognizer = sr.Recognizer()
+    chunks = split_audio(audio_file)
+    full_transcription = ""
 
-    # Convert audio to WAV format if necessary
-    if not audio_file.endswith('.wav'):
-        sound = AudioSegment.from_file(audio_file)
-        audio_file = "converted.wav"
-        sound.export(audio_file, format="wav")
+    for index, chunk in enumerate(chunks):
+        try:
+            print(f"Transcribing chunk {index + 1}/{len(chunks)}...")
+            chunk_transcription = transcribe_audio_chunk(chunk, index)
+            full_transcription += chunk_transcription + "\n"
+        except Exception as e:
+            print(f"Error transcribing chunk {index + 1}: {e}")
 
-    # Load audio file
-    with sr.AudioFile(audio_file) as source:
-        audio = recognizer.record(source)  # read the entire audio file
-
-    # Recognize speech using Google Web Speech API
+    # Save the full transcription to a text file
     try:
-        text = recognizer.recognize_google(audio)
-        print("Transcription: " + text)
-    except sr.UnknownValueError:
-        text = "Speech recognition could not understand audio"
-    except sr.RequestError as e:
-        text = f"Could not request results from Google Web Speech API; {e}"
-
-    # Save the transcription to a text file
-    with open(text_file, "w") as file:
-        file.write(text)
+        with open(text_file, "w") as file:
+            file.write(full_transcription)
+    except Exception as e:
+        print(f"Error saving transcription to file: {e}")
 
 # Example usage
 current_dir = os.path.dirname(__file__)
