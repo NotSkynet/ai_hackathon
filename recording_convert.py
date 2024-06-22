@@ -24,14 +24,17 @@ def transcribe_audio_chunk(chunk, chunk_index):
     temp_audio_file = f"chunk_{chunk_index}.wav"
     chunk.export(temp_audio_file, format="wav")
     
-    with open(temp_audio_file, "rb") as audio:
-        response = client.audio.transcriptions.create(
-            model="whisper-1",
-            file=audio,
-            response_format="json"
-        )
-        os.remove(temp_audio_file)
+    try:
+        with open(temp_audio_file, "rb") as audio:
+            response = client.audio.transcriptions.create(
+                model="whisper-1",
+                file=audio,
+                response_format="json"
+            )
         return response.text
+    finally:
+        if os.path.exists(temp_audio_file):
+            os.remove(temp_audio_file)
 
 def audio_to_text(audio_file, text_file):
     chunks = split_audio(audio_file)
