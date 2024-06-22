@@ -1,8 +1,8 @@
 from pydub import AudioSegment
 from pydub.playback import play
 
-import speech_recognition as sr #this one not work now still firgure it out
 from pydub import AudioSegment
+import speech_recognition as sr
 
 def audio_to_text(audio_file, text_file):
     # Initialize recognizer
@@ -31,8 +31,8 @@ def audio_to_text(audio_file, text_file):
     with open(text_file, "w") as file:
         file.write(text)
 
-# Example usage
-audio_file = "path/to/your/audiofile.mp3"  # Update this to your audio file path
-text_file = "path/to/your/outputfile.txt"  # Update this to your desired output text file path
+
+audio_file = "Audio/recording.wav"
+text_file = "path/to/your/outputfile.txt"
 audio_to_text(audio_file, text_file)
 
