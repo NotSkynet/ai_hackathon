@@ -7,10 +7,10 @@ ffmpeg_path = os.path.join(os.path.dirname(__file__), 'bin')
 os.environ["PATH"] += os.pathsep + ffmpeg_path
 
 # Initialize OpenAI client using the API key from the environment variable
-api_key = os.getenv('OPENAI_API_KEY')
+api_key = "sk-proj-Z3QTkb8pzow4wQTFb0FtT3BlbkFJbjs3JSqSocrBf0vsEaom"
 client = openai.OpenAI(api_key=api_key)
 
-def split_audio(audio_file, chunk_size_ms=240000):  # 4 minutes = 240000 ms
+def split_audio(audio_file, chunk_size_ms=60000):  # 1 minute = 60000 ms
     """Split audio file into smaller chunks."""
     audio = AudioSegment.from_file(audio_file)
     chunks = []
@@ -25,13 +25,13 @@ def transcribe_audio_chunk(chunk, chunk_index):
     chunk.export(temp_audio_file, format="wav")
     
     with open(temp_audio_file, "rb") as audio:
-        transcription = client.audio.transcriptions.create(
+        response = client.audio.transcriptions.create(
             model="whisper-1",
             file=audio,
-            response_format="text"
+            response_format="json"
         )
         os.remove(temp_audio_file)
-        return transcription.text
+        return response.text
 
 def audio_to_text(audio_file, text_file):
     chunks = split_audio(audio_file)
