@@ -1,66 +1,67 @@
 HPI (History of Present Illness)
 
-â€¢ [REDACTED] is a male patient complaining of severe stomach ache and vomiting since last night.
-â€¢ No diarrhea reported.
-â€¢ Denies any known allergies.
-â€¢ Ate a homemade seafood and pasta dish cooked by his children for his wedding anniversary the previous night. He ate his portion as well as his wife's portion.
+• [REDACTED] is a male patient presenting with severe stomach ache, vomiting, and no diarrhea. Symptoms started the previous night.
+• Ate a home-cooked seafood and pasta dish made by his children for his wedding anniversary.
+• Denies any known food allergies.
 
-ROS (Review of Systems)
+ROS (Review of Systems)  
 
-â€¢ Gastrointestinal: Severe stomach ache, vomiting [REVIEW]
-â€¢ Other Systems: [REVIEW]
-
-Physical Exam
-
-â€¢ General: [REVIEW]
-â€¢ HEENT: [REVIEW]
-â€¢ Cardiovascular: [REVIEW]
-â€¢ Respiratory: [REVIEW]
-â€¢ Gastrointestinal: [REVIEW]
-â€¢ Neurological: [REVIEW]
-â€¢ Musculoskeletal: [REVIEW]
-â€¢ Skin: [REVIEW]
-
-Assessment
-
-â€¢ Suspected food poisoning
-
-Plan
-
-â€¢ Advised rest and no food intake for the next 24 hours.
-â€¢ Recommended intake of bread, rice, and hydration with water or black tea with sugar after 24 hours.
-â€¢ No need for a follow-up appointment unless symptoms persist after 2 days.
-
-HPI (History of Present Illness)
-
-â€¢ [REDACTED] is a male patient presenting with chest pain, difficulty speaking, persistent sneezing, and severe headaches for the past 3 days.
-â€¢ Took paracetamol for headaches without relief.
-
-ROS (Review of Systems)
-
-â€¢ Constitutional: Fever [REVIEW]
-â€¢ Respiratory: Sneezing [REVIEW]
-â€¢ Neurological: Severe headaches [REVIEW]
-â€¢ Other Systems: [REVIEW]
+• Constitutional: No reported fever
+• Gastrointestinal: Severe stomach ache, vomiting, no diarrhea
+• Other systems: [REVIEW]
 
 Physical Exam
 
-â€¢ General: Fever [REVIEW]
-â€¢ HEENT: Oropharynx examined [REVIEW]
-â€¢ Cardiovascular: [REVIEW]
-â€¢ Respiratory: [REVIEW]
-â€¢ Gastrointestinal: [REVIEW]
-â€¢ Neurological: [REVIEW]
-â€¢ Musculoskeletal: [REVIEW]
-â€¢ Skin: [REVIEW]
+• General: [REVIEW]
+• Head/ENT: [REVIEW]  
+• Cardiovascular: [REVIEW]
+• Respiratory: [REVIEW]
+• Abdomen: [REVIEW]
+• Neurological: [REVIEW]
+• Musculoskeletal: [REVIEW]
+• Skin: [REVIEW]
 
 Assessment
 
-â€¢ Suspected viral illness
+• Suspected food poisoning
 
 Plan
 
-â€¢ Advised bed rest for 2-3 days.
-â€¢ Prescribed stronger painkillers for headaches, to be taken every 4 hours.
-â€¢ Instructed to return for blood tests if symptoms persist after 3 days.
-â€¢ Patient reported allergy to penicillin.
+• Recommended resting and not eating for 24 hours
+• After 24 hours, start with bland foods like bread or rice, no dairy
+• Increase fluid intake with water or black tea with sugar
+• Follow up if not improved in 2 days
+
+HPI (History of Present Illness)  
+
+• [REDACTED] is a male patient complaining of chest pain, difficulty speaking, sneezing, and severe headaches for the past 3 days.
+• Using paracetamol for headaches without much relief.
+• Denies allergies except penicillin.
+
+ROS (Review of Systems)
+
+• Constitutional: Low grade fever
+• Respiratory: Sneezing 
+• Neurological: Severe headaches
+• Other systems: [REVIEW]  
+
+Physical Exam
+
+• General: Fever present
+• Head/ENT: [REVIEW]
+• Cardiovascular: [REVIEW]
+• Respiratory: [REVIEW] 
+• Abdomen: [REVIEW]
+• Neurological: [REVIEW]
+• Musculoskeletal: [REVIEW]
+• Skin: [REVIEW]
+
+Assessment  
+
+• Suspected viral illness
+
+Plan
+
+• Recommended rest for 2-3 days
+• Prescribed stronger pain medication for headaches
+• Advised to return if not improved for blood tests

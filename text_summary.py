@@ -68,7 +68,7 @@ else:
 # Combine the text from all TextBlock objects if there are multiple
 combined_text = "\n".join(response_texts)
 
-# Remove special characters and formatting
+# # Remove special characters and formatting
 clean_text = combined_text.replace("\\n", "\n").replace("\\t", "\t").replace("\\", "")
 
 # Write the final cleaned text to Medical_Chart.txt
