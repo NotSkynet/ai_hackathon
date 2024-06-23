@@ -51,7 +51,7 @@ message = client.messages.create(
     messages=[
         {
             "role": "user",
-            "content": f"Your job is to take the patient transcript and create a Medical Chart Documentation for the transcript in the exact format that will be placed below at the end of this prompt. Please make sure to replace any PII within the Medical Chart Documentation with [REDACTED] like stated in the example in your system prompt. You must follow the exact format for your response as you have been instructed to in your system prompt. here is the transcript: {escaped_transcript_content}"
+            "content": f"Your job is to take the patient transcript and create a Medical Chart Documentation for the transcript in the exact format that will be placed below at the end of this prompt. Please make sure to replace any PII within the Medical Chart Documentation with [REDACTED] like stated in the example in your system prompt. You must follow the exact format for your response as you have been instructed to in your system prompt. Remove any PII or PHI information as stated in the system prompt remove personal things like 'my wife' or location based things like 'at a wedding' ect. Do not include info like or similar to: 'cooked by children for wedding anniversary' as that is not relevant to medical treatment and is a violation of HIPAA and PII and PHI. here is the transcript: {escaped_transcript_content}"
         }
     ]
 )
