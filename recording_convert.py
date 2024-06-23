@@ -7,9 +7,12 @@ ffmpeg_path = os.path.join(os.path.dirname(__file__), 'bin')
 os.environ["PATH"] += os.pathsep + ffmpeg_path
 
 # Initialize OpenAI client using the API key from the environment variable
-api_key = "sk-proj-Z3QTkb8pzow4wQTFb0FtT3BlbkFJbjs3JSqSocrBf0vsEaom"
-client = openai.OpenAI(api_key=api_key)
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("Please set the OPENAI_API_KEY environment variable")
 
+client = openai.OpenAI(api_key=api_key)
+ 
 def split_audio(audio_file, chunk_size_ms=60000):  # 1 minute = 60000 ms
     """Split audio file into smaller chunks."""
     audio = AudioSegment.from_file(audio_file)
@@ -58,5 +61,7 @@ def audio_to_text(audio_file, text_file):
 # Example usage
 current_dir = os.path.dirname(__file__)
 audio_file = os.path.join(current_dir, 'Audio', 'recording.wav')
-text_file = os.path.join(current_dir, 'outputfile.txt')
+output_dir = os.path.join(current_dir, 'summary_input')
+os.makedirs(output_dir, exist_ok=True)
+text_file = os.path.join(output_dir, 'output.txt')
 audio_to_text(audio_file, text_file)

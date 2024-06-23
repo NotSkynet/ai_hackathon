@@ -1,0 +1,66 @@
+HPI (History of Present Illness)
+
+• [REDACTED] is a male patient complaining of severe stomach ache and vomiting since last night.
+• No diarrhea reported.
+• Denies any known allergies.
+• Ate a homemade seafood and pasta dish cooked by his children for his wedding anniversary the previous night. He ate his portion as well as his wife's portion.
+
+ROS (Review of Systems)
+
+• Gastrointestinal: Severe stomach ache, vomiting [REVIEW]
+• Other Systems: [REVIEW]
+
+Physical Exam
+
+• General: [REVIEW]
+• HEENT: [REVIEW]
+• Cardiovascular: [REVIEW]
+• Respiratory: [REVIEW]
+• Gastrointestinal: [REVIEW]
+• Neurological: [REVIEW]
+• Musculoskeletal: [REVIEW]
+• Skin: [REVIEW]
+
+Assessment
+
+• Suspected food poisoning
+
+Plan
+
+• Advised rest and no food intake for the next 24 hours.
+• Recommended intake of bread, rice, and hydration with water or black tea with sugar after 24 hours.
+• No need for a follow-up appointment unless symptoms persist after 2 days.
+
+HPI (History of Present Illness)
+
+• [REDACTED] is a male patient presenting with chest pain, difficulty speaking, persistent sneezing, and severe headaches for the past 3 days.
+• Took paracetamol for headaches without relief.
+
+ROS (Review of Systems)
+
+• Constitutional: Fever [REVIEW]
+• Respiratory: Sneezing [REVIEW]
+• Neurological: Severe headaches [REVIEW]
+• Other Systems: [REVIEW]
+
+Physical Exam
+
+• General: Fever [REVIEW]
+• HEENT: Oropharynx examined [REVIEW]
+• Cardiovascular: [REVIEW]
+• Respiratory: [REVIEW]
+• Gastrointestinal: [REVIEW]
+• Neurological: [REVIEW]
+• Musculoskeletal: [REVIEW]
+• Skin: [REVIEW]
+
+Assessment
+
+• Suspected viral illness
+
+Plan
+
+• Advised bed rest for 2-3 days.
+• Prescribed stronger painkillers for headaches, to be taken every 4 hours.
+• Instructed to return for blood tests if symptoms persist after 3 days.
+• Patient reported allergy to penicillin.
