@@ -23,8 +23,3 @@ This repository contains code and resources for automating medical chart documen
 3. **Running the Main Script**:
    - The `main.py` script ties everything together, allowing you to process audio recordings directly and obtain the medical chart documentation.
    - Command: `python main.py <input_audio_file>`
-
-## Example
-To convert an audio recording and generate a medical chart, run:
-```bash
-python main.py path/to/your/audiofile.wav
