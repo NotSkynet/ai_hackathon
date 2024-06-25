@@ -35,8 +35,8 @@ escaped_transcript_content = escaped_transcript_content[1:-1]
 client = AnthropicBedrock(
     # Authenticate by either providing the keys below or use the default AWS credential providers, such as
     # using ~/.aws/credentials or the "AWS_SECRET_ACCESS_KEY" and "AWS_ACCESS_KEY_ID" environment variables.
-    aws_access_key="AKIA6EPJBVGE6FHW2MNL",
-    aws_secret_key="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",
+    aws_access_key="AWS_ACCESS_KEY_ID",
+    aws_secret_key="AWS_SECRET_ACCESS_KEY",
     # Temporary credentials can be used with aws_session_token.
     # Read more at https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html.
     # aws_region changes the aws region to which the request is made. By default, we read AWS_REGION,
